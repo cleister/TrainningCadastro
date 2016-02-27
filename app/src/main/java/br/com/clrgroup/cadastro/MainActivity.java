@@ -1,5 +1,6 @@
 package br.com.clrgroup.cadastro;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,8 +9,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText editTextNome;
+    EditText editTextIdade;
+    EditText editeTextTelefone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +24,22 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        editTextNome = (EditText)findViewById(R.id.txtNome);
+        editTextIdade = (EditText)findViewById(R.id.txtIdade);
+        editeTextTelefone = (EditText)findViewById(R.id.txtTelefone);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                String nome = editTextNome.getText().toString();
+                String idade = editTextIdade.getText().toString();
+                String telefone = editeTextTelefone.getText().toString();
+
+                Intent intent = new Intent(MainActivity.this, Tela2Activity.class);
+
+
+
             }
         });
     }

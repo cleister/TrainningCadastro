@@ -12,8 +12,62 @@
     tools:context="br.com.clrgroup.cadastro.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNome"
+        android:hint="Nome"
+        android:layout_below="@+id/lblNome"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtIdade"
+        android:hint="Idade"
+        android:layout_below="@+id/lblIdade"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/txtNome" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/txtTelefone"
+        android:phoneNumber="false"
+        android:hint="Telefone"
+        android:layout_below="@+id/lblTelefone"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/txtIdade" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cleister Assis, Alô Mundo!" />
+        android:text="Nome"
+        android:id="@+id/lblNome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idade"
+        android:id="@+id/lblIdade"
+        android:layout_below="@+id/txtNome"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:id="@+id/lblTelefone"
+        android:layout_below="@+id/txtIdade"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
